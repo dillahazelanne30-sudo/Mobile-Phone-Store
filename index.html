@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HAZE - Your Ultimate Phone Destination</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP ANNOUNCEMENT -->
+    <div class="announcement">
+        FREE SHIPPING ON ORDERS OVER ₱5,000
+    </div>
+
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="header-top">
+
+            <div class="logo">
+                HAZE
+            </div>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    placeholder="Search phones and brands..."
+                    id="searchInput"
+                >
+
+                <button onclick="searchProducts()">
+                    🔍
+                </button>
+            </div>
+
+            <div class="header-buttons">
+
+                <button onclick="showPage('account')">
+                    👤 Account
+                </button>
+
+                <button onclick="showPage('favorites')">
+                    ♡
+                </button>
+
+                <button onclick="showPage('cart')">
+                    🛒
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+        <nav>
+
+            <button onclick="showPage('home')">
+                HOME
+            </button>
+
+            <button onclick="showPage('new')">
+                NEW ARRIVALS
+            </button>
+
+            <button onclick="showPage('apple')">
+                APPLE
+            </button>
+
+            <button onclick="showPage('samsung')">
+                SAMSUNG
+            </button>
+
+            <button onclick="showPage('oppo')">
+                OPPO
+            </button>
+
+            <button onclick="showPage('accessories')">
+                ACCESSORIES
+            </button>
+
+            <button onclick="showPage('sale')" class="sale-button">
+                SALE
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
+
+    <section id="homePage" class="page active-page">
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-text">
+                    NEW SEASON. NEW TECH.
+                </p>
+
+                <h1>
+                    FIND YOUR<br>
+                    NEXT PHONE.
+                </h1>
+
+                <p>
+                    Discover the latest smartphones from Apple,
+                    Samsung, and OPPO.
+                </p>
+
+                <button
+                    class="shop-button"
+                    onclick="showPage('new')">
+
+                    SHOP NOW →
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- BRANDS -->
+
+        <section class="brands">
+
+            <h2>SHOP BY BRAND</h2>
+
+            <div class="brand-buttons">
+
+                <button onclick="showPage('apple')">
+                    APPLE
+                </button>
+
+                <button onclick="showPage('samsung')">
+                    SAMSUNG
+                </button>
+
+                <button onclick="showPage('oppo')">
+                    OPPO
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURED PRODUCTS -->
+
+        <main>
+
+            <div class="products-header">
+
+                <div>
+
+                    <p class="small-text">
+                        TRENDING NOW
+                    </p>
+
+                    <h2>
+                        FEATURED PHONES
+                    </h2>
+
+                </div>
+
+                <button
+                    class="view-all"
+                    onclick="showPage('new')">
+
+                    VIEW ALL →
+
+                </button>
+
+            </div>
+
+
+            <div class="product-grid">
+
+
+                <!-- IPHONE -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <span class="new-tag">
+                            NEW
+                        </span>
+
+                        <img
+                            src="https://cdn.tehnoezh.ua/0/0/0/2/1/0/3/9/9/000210399_545_545.webp"
+                            alt="Apple iPhone 17 Pro"
+                            onclick="zoomImage(this)"
+                        >
+
+                        <button
+                            class="heart"
+                            onclick="addFavorite(this, 'Apple iPhone 17 Pro')">
+
+                            ♡
+
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="brand">
+                            APPLE
+                        </p>
+
+                        <h3>
+                            Apple iPhone 17 Pro
+                        </h3>
+
+                        <p class="description">
+                            256GB, 512GB, 1TB • Titanium
+                        </p>
+
+                        <p class="price">
+                            ₱79,990
+                        </p>
+
+                        <button
+                            class="product-button"
+                            onclick="showProductDetails('Apple iPhone 17 Pro')">
+
+                            VIEW PRODUCT
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SAMSUNG -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <span class="new-tag">
+                            NEW
+                        </span>
+
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLX6Yo9qqlzSXeCKOM9Z80py1pD5unM4uM5-hZswIOsSPNJg3tEp5tCwM&s=10"
+                            alt="Samsung Galaxy S26 Ultra"
+                            onclick="zoomImage(this)"
+                        >
+
+                        <button
+                            class="heart"
+                            onclick="addFavorite(this, 'Samsung Galaxy S26 Ultra')">
+
+                            ♡
+
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="brand">
+                            SAMSUNG
+                        </p>
+
+                        <h3>
+                            Galaxy S26 Ultra
+                        </h3>
+
+                        <p class="description">
+                            12GB + 256GB, 12GB + 512GB • Titanium Gray
+                        </p>
+
+                        <p class="price">
+                            ₱84,990
+                        </p>
+
+                        <button
+                            class="product-button"
+                            onclick="showProductDetails('Samsung Galaxy S26 Ultra')">
+
+                            VIEW PRODUCT
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- OPPO -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <span class="new-tag">
+                            NEW
+                        </span>
+
+                        <img
+                            src="https://electroworld.abenson.com/media/catalog/product/1/9/194412_2024.jpg"
+                            alt="OPPO A3"
+                            onclick="zoomImage(this)"
+                        >
+
+                        <button
+                            class="heart"
+                            onclick="addFavorite(this, 'OPPO A3')">
+
+                            ♡
+
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="brand">
+                            OPPO
+                        </p>
+
+                        <h3>
+                            OPPO A3 - STARLIGHT WHITE
+                        </h3>
+
+                        <p class="description">
+                            8GB RAM + 256GB ROM • Starlight White
+                        </p>
+
+                        <p class="price">
+                            ₱9,839.00
+                        </p>
+
+                        <button
+                            class="product-button"
+                            onclick="showProductDetails('OPPO A3')">
+
+                            VIEW PRODUCT
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <!-- PROMOTION -->
+
+        <section class="promotion">
+
+            <div>
+
+                <p class="small-text">
+                    HAZE EXCLUSIVE
+                </p>
+
+                <h2>
+                    UPGRADE YOUR<br>
+                    EVERYDAY.
+                </h2>
+
+                <p>
+                    Get the phone you want with flexible
+                    payment options.
+                </p>
+
+                <button onclick="showPage('sale')">
+                    SEE OFFERS →
+                </button>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCT PAGE
+    ========================== -->
+
+    <section id="productPage" class="page">
+
+        <main class="catalog">
+
+            <div class="catalog-header">
+
+                <div>
+
+                    <p class="small-text" id="catalogSmallTitle">
+                        HAZE STORE
+                    </p>
+
+                    <h1 id="catalogTitle">
+                        PRODUCTS
+                    </h1>
+
+                </div>
+
+                <div class="sort-box">
+
+                    <label for="sortProducts">
+                        Sort:
+                    </label>
+
+                    <select
+                        id="sortProducts"
+                        onchange="sortProducts()">
+
+                        <option value="default">
+                            Featured
+                        </option>
+
+                        <option value="low">
+                            Price: Low to High
+                        </option>
+
+                        <option value="high">
+                            Price: High to Low
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="catalogGrid"
+                class="product-grid">
+
+            </div>
+
+        </main>
+
+    </section>
+
+
+    <!-- =========================
+         OTHER PAGES
+    ========================== -->
+
+    <section id="otherPage" class="page">
+
+        <div class="other-content">
+
+            <p class="small-text">
+                HAZE
+            </p>
+
+            <h1 id="otherTitle">
+                PAGE
+            </h1>
+
+            <p id="otherDescription">
+                This section is ready for you to customize.
+            </p>
+
+            <button
+                class="shop-button purple-button"
+                onclick="showPage('home')">
+
+                ← BACK TO HOME
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCT DETAILS MODAL
+    ========================== -->
+
+    <div
+        id="detailsModal"
+        class="details-modal">
+
+        <div class="details-box">
+
+            <button
+                class="modal-close"
+                onclick="closeDetails()">
+
+                ×
+
+            </button>
+
+            <div id="detailsContent">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         IMAGE ZOOM MODAL
+    ========================== -->
+
+    <div
+        id="zoomModal"
+        class="zoom-modal">
+
+        <span
+            class="close-zoom"
+            onclick="closeZoom()">
+
+            ×
+
+        </span>
+
+        <img
+            id="zoomedImage"
+            class="zoomed-image"
+            src=""
+            alt="Zoomed product">
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            HAZE
+        </div>
+
+        <div class="footer-links">
+
+            <button onclick="showPage('about')">
+                About Us
+            </button>
+
+            <button onclick="showPage('contact')">
+                Contact
+            </button>
+
+            <button onclick="showPage('shipping')">
+                Shipping
+            </button>
+
+            <button onclick="showPage('returns')">
+                Returns
+            </button>
+
+            <button onclick="showPage('help')">
+                Help
+            </button>
+
+        </div>
+
+        <p>
+            © 2026 HAZE. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
